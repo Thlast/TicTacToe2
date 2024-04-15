@@ -11,7 +11,7 @@ export function GameServer() {
     const [player, setPlayer] = useState(null); // Agregamos el estado para almacenar el tipo de jugador
 
     useEffect(() => {
-        const newSocket = io("http://localhost:4000", {
+        const newSocket = io("https://server-socket-neon.vercel.app", {
             transports: ["websocket"],
             withCredentials: true,
         });
