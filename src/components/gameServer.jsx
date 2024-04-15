@@ -15,6 +15,7 @@ export function GameServer() {
             transports: ["websocket"],
             withCredentials: true,
         });
+        
         setSocket(newSocket);
         newSocket.on("init", ({ history, xIsNext, player }) => {
             setHistory(history);
