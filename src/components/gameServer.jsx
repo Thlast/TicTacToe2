@@ -9,12 +9,12 @@ export function GameServer() {
     const [xIsNext, setXIsNext] = useState(true);
     const [winnerSquares, setWinnerSquares] = useState();
     const [player, setPlayer] = useState(null); // Agregamos el estado para almacenar el tipo de jugador
-    const url = "https://serverestudio-fzvt.vercel.app/"
+    const url = "https://server-socket-t21o.onrender.com/"
     //const url = "http://localhost:4000/"
     useEffect(() => {
         const newSocket = io(url, {
             transports: ["websocket"],
-            withCredentials: true,
+            withCredentials: false,
         });
         
         setSocket(newSocket);
