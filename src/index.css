@@ -177,3 +177,46 @@ ul {
 .letra-caida {
   animation: caida 0.5s ease-in-out forwards;
 }
+
+.chat-container {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.mensajes-container {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.mensaje {
+  background-color: #f2f2f2;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.input-container {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.input-mensaje {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.enviar-btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

@@ -3,6 +3,7 @@ import io from "socket.io-client";
 import { Board } from "./board";
 import { confetti } from "./confetti";
 import { NextPlayer } from "./nextPlayer";
+import { Chat } from "./chat";
 
 export function GameServer() {
     const [socket, setSocket] = useState(null);
@@ -15,8 +16,8 @@ export function GameServer() {
     const [nextToDisapearO, setNextToDisapearO] = useState();
     const [playerMoves, setPlayerMoves] = useState();
 
-    //const url = "http://localhost:4000/";
-    const url = "https://server-socket-t21o.onrender.com";
+    const url = "http://localhost:4000/";
+    //const url = "https://server-socket-t21o.onrender.com";
     useEffect(() => {
         if (playerMoves) {
             if (player == "X" && playerMoves['X']?.length == 3) {
@@ -101,6 +102,8 @@ export function GameServer() {
                     onClick={handleClickUsuario}
                 />
             </div>
+            <br></br>
+            <Chat socket={socket} />
         </div>
     );
 }
