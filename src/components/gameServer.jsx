@@ -16,8 +16,8 @@ export function GameServer() {
     const [nextToDisapearO, setNextToDisapearO] = useState();
     const [playerMoves, setPlayerMoves] = useState();
 
-    const url = "http://localhost:4000/";
-    //const url = "https://server-socket-t21o.onrender.com";
+    //const url = "http://localhost:4000/";
+    const url = "https://server-socket-t21o.onrender.com";
     useEffect(() => {
         if (playerMoves) {
             if (player == "X" && playerMoves['X']?.length == 3) {
